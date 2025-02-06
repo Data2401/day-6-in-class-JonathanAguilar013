@@ -16,32 +16,51 @@ The questions from your notes today are below, please copy your answers them her
 1. Write your own function that takes the temperature in Fahrenheit as an argument and returns the Celcius equivalent. 
 
 ```{R}
-
-
+celsius <- function(fah) {
+  
+  cel <- (5/9)*(fah - 32)
+  
+  cel
+}
+celsius(23)
 ```
 
 2. Expand that function so that it takes a temperature in Fahrenheit and a distance in feet and returns **both** the temperature in Celcius and the distance in meters (you'll likely need to remember the `c()` function!)
 
 
 ```{r}
-
-
+con <- function(fah,ft) {
+  cel <- celsius(fah)
+  meters <- 0.3048 * ft
+  
+  return(c(cel,meters))
+}
+con(32,35)
 ```
 
 
 3. Write a function that prints out a statement of whether the number passed as an argument is positive, negative or 0. 
 
 ```{R}
-
-
+sign <- function(x){
+  if (x<0){"This number is negative."}
+  else if (x>0){"This number is positive."}
+  else{"This number is zero."}
+}
+sign(-7)
 ```
 
 4. Write a function that returns the absolute value of the number passed as an argument.
    + Don't use `abs()`. Use the flow from problem 1 and multiply by negative one as necessary. 
    
 ```{r}
-
-
+a <- function(x){
+  if (x<0) {
+    x*-1
+}
+  else {x}
+}
+a(-10)
 ```
 
 5. Hard mode: add an error check to that function that prints out the string "Please pass a numerical value to this function" if the user passes the function a string. 
@@ -49,8 +68,11 @@ The questions from your notes today are below, please copy your answers them her
    
 ```{r}
 
-
-
+ab <- function(x){
+  if (is.character(x)){"Please pass a numerical value to this function."}
+  else{a(x)}
+}
+ab("Five")
 ```
    
    
