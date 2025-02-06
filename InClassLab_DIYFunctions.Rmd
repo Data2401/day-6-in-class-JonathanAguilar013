@@ -1,6 +1,6 @@
 ---
 title: "In Class Lab - DIY Functions"
-author: "Dr. Shoemaker"
+author: "Jonathan Aguilar"
 date: "DATA 2401"
 output: html_document
 ---
